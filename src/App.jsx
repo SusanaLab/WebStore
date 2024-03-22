@@ -1,19 +1,18 @@
-import Footer from './components/Footer';
-import Home from './components/Home';
-import Navbar from './components/Navbar';
-
-import './index.css'
+import { ThemeProvider } from "@mui/material";
+import theme from "./components/styles/themeConfig";
+import Counter from "./components/common/counter/Counter";
+import Navbar from "./components/layout/navbar/Navbar";
+import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
+import "./index.css";
 
 function App() {
-
   return (
     <>
-      <Navbar/>
-      <Footer/>
-      <Home/>
-   
+      <ThemeProvider theme={theme}>
+        <Navbar />
+      </ThemeProvider>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
