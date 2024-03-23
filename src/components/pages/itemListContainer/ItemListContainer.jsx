@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductCard from '../../common/productCard/ProductCard'
+import ProductCard from '../../common/cardWidget/CardWidget'
 
 const ItemListContainer = () => {
   return (
