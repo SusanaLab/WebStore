@@ -4,14 +4,13 @@ import Navbar from "./components/layout/navbar/Navbar";
 import ItemListContainer from "./components/common/ItemListContainer/ItemListContainer";
 import "./index.css";
 
-
 function App() {
+  const saludo = "Bienvenido User, Transforma tu hogar, inspira tu vida.";
   return (
     <>
       <ThemeProvider theme={theme}>
         <Navbar />
-     <ItemListContainer/>
-  
+        <ItemListContainer greeting={saludo} />
       </ThemeProvider>
     </>
   );

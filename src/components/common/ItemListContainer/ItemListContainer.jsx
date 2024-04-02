@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 
-const ItemListContainer = ({Greetings}) => {
+const ItemListContainer = ({ greeting }) => {
   return (
     <div>
       <Box>
@@ -11,7 +11,7 @@ const ItemListContainer = ({Greetings}) => {
           align="center"
           sx={{ marginTop: "2rem" }}
         >
-          Bienvenido
+          {greeting}
         </Typography>
       </Box>
     </div>

@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from "react";
 
 import {
   AppBar,
@@ -8,37 +8,29 @@ import {
   Toolbar,
   Typography,
   Menu,
-  MenuList, 
-  MenuItem
+  MenuList,
+  MenuItem,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { LocalLaundryServiceSharp } from "@mui/icons-material";
 import FiberSmartRecordIcon from "@mui/icons-material/FiberSmartRecord";
-import CardWidget from '../../common/cardWidget/CardWidget';
-import logo from '../../../images/logo.png'
+import CartWidget from "../../common/cartWidget/CartWidget";
+import logo from "../../../images/logo.png";
 
 const Navbar = () => {
-const [anchorNav, setAnchorNav] = useState(null);
+  const [anchorNav, setAnchorNav] = useState(null);
 
-const openMenu = (event) => {
-  setAnchorNav(event.currentTarget);
-};
+  const openMenu = (event) => {
+    setAnchorNav(event.currentTarget);
+  };
 
-const closeMenu = () => {
-  setAnchorNav(null);
-};
+  const closeMenu = () => {
+    setAnchorNav(null);
+  };
   return (
     <AppBar position="static">
       <Toolbar>
-        {/*         <FiberSmartRecordIcon
-          size="large"
-          edge="start"
-          color="secondary"
-          sx={{ display: { xs: "flex", md: "none" } }}
-        >
-          <LocalLaundryServiceSharp />
-        </FiberSmartRecordIcon> */}
-        <Box sx={{ display:{ xs: "flex", md: "none" }, alignItems: "center"}}>
+        <Box sx={{ display: { xs: "flex", md: "none" }, alignItems: "center" }}>
           <img src={logo} alt="Logo" style={{ width: 15, height: 35 }} />
         </Box>
 
@@ -66,7 +58,7 @@ const closeMenu = () => {
             sx={{ display: { xs: "flex", md: "none" } }}
           >
             <MenuList>
-              <MenuItem>Ceramica</MenuItem>
+              <MenuItem> Ceramica</MenuItem>
               <MenuItem>Lamparas</MenuItem>
               <MenuItem>Muebles</MenuItem>
               <MenuItem>Cocina</MenuItem>
@@ -75,7 +67,7 @@ const closeMenu = () => {
         </Box>
         <Box sx={{ display: { xs: "flex", md: "flex" }, marginLeft: "auto" }}>
           {" "}
-          <CardWidget />
+          <CartWidget />
         </Box>
       </Toolbar>
     </AppBar>
