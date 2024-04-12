@@ -66,7 +66,6 @@ const Navbar = () => {
           </Menu>
         </Box>
         <Box sx={{ display: { xs: "flex", md: "flex" }, marginLeft: "auto" }}>
-          {" "}
           <CartWidget />
         </Box>
       </Toolbar>
