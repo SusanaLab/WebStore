@@ -36,17 +36,17 @@ const Navbar = () => {
 
         <Typography
           variant="h6"
-          color="secondary.dark"
+          color="dark"
           component="div"
           sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
         >
           LAFFET
         </Typography>
         <Box sx={{ display: { xs: "none", md: "flex" } }}>
-          <Button color="secondary">Ceramica</Button>
-          <Button color="secondary">Lamparas</Button>
-          <Button color="secondary">Muebles</Button>
-          <Button color="secondary">Cocina</Button>
+          <Button color="dark">Ceramica</Button>
+          <Button color="dark">Lamparas</Button>
+          <Button color="dark">Muebles</Button>
+          <Button color="dark">Cocina</Button>
         </Box>
         <Box sx={{ display: { xs: "flex", md: "none" } }}>
           <IconButton onClick={openMenu}>
