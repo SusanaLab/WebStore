@@ -62,76 +62,53 @@ const Categories = () => {
         </Box>
       </Grid>
       <Grid
+        container
         item
         xs={12}
         md={12}
         sx={{
+          backgroundImage: `url(${newProdducts})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
+          minHeight: "400px", // Ajusta la altura mínima según sea necesario
         }}
       >
         <Box
           sx={{
             position: "relative",
-            width: "100%",
             textAlign: "center",
-            justifyContent: "center",
-            alignItems: "center",
+            maxWidth: "80%", // Ajusta el ancho máximo según sea necesario
           }}
         >
-          <img
-            src={newProdducts}
-            alt="Logo"
-            style={{ width: "100%", height: "auto" }}
-          />
-          <Box>
-            <Typography
-              variant="h4"
-              color="primary"
-              gutterBottom
-              sx={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                margin: 10,
-                paddingTop:7,
-                paddingRight: 1,
-                paddingLeft: 1,
-      
-              }}
-            >
-              Unveil the latest arrivals and embark on a journey of discovery
-              through our newest collection. Explore now and elevate your home
-              with our freshest finds
-            </Typography>
-          </Box>
-          <Box>
-            <Typography
-              variant="h2"
-              color="primary"
-              gutterBottom
-              sx={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                padding: 4,
-                margin: 5,
-              }}
-            >
-              Muebles
-            </Typography>
-          </Box>
+          <Typography
+            variant="h2"
+            color="primary"
+            gutterBottom
+            sx={{
+              margin: 5,
+            }}
+          >
+            Muebles
+          </Typography>
+          <Typography
+            variant="h4"
+            color="primary"
+            gutterBottom
+            sx={{
+              margin: 2,
+            }}
+          >
+            Unveil the latest arrivals and embark on a journey of discovery
+            through our newest collection.
+          </Typography>
           <Button
             variant="contained"
             size="large"
             sx={{
-              position: "absolute",
-              bottom: 19,
-              left: "50%",
-              transform: "translateX(-50%)",
+              margin: 2,
             }}
             endIcon={<ArrowForwardIosIcon />}
           >

@@ -13,6 +13,9 @@ const theme = createTheme({
     dark: {
       main: "#1B1A16",
     },
+    acento: {
+      main: "#79B2EE",
+    },
   },
 });
 

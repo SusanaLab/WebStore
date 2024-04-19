@@ -7,15 +7,16 @@ const Home = () => {
   return (
     <Grid
       container
-      spacing={1}
+      spacing={0}
       sx={{
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
         justifyContent: "center",
         alignItems: "center",
-        height: "100vh", 
+        height: "100vh",
         padding: 7,
+        marginBottom: { xs: 7, md: 0 },
       }}
     >
       <Grid item xs={12} md={6} sx={{ height: "100%" }}>
@@ -31,7 +32,12 @@ const Home = () => {
             variant="outlined"
             color="dark"
             size="large"
-            sx={{ marginTop: 5, borderWidth: 4, borderColor: "#1B1A16", padding:1}} // Establece el ancho y color del borde
+            sx={{
+              marginTop: 5,
+              borderWidth: 4,
+              borderColor: "#1B1A16",
+              padding: 1,
+            }}
           >
             <Typography variant="h4" gutterBottom>
               Shop now
@@ -50,6 +56,7 @@ const Home = () => {
           }}
         >
           <img
+            sx={{ display: { xs: "none", md: "none" } }}
             src={foto}
             alt="Logo"
             style={{ width: "100%", maxWidth: 440, height: "auto" }}

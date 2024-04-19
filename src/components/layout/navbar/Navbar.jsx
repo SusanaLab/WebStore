@@ -16,6 +16,7 @@ import { LocalLaundryServiceSharp } from "@mui/icons-material";
 import FiberSmartRecordIcon from "@mui/icons-material/FiberSmartRecord";
 import CartWidget from "../../common/cartWidget/CartWidget";
 import logo from "../../../images/logo.png";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [anchorNav, setAnchorNav] = useState(null);
@@ -30,23 +31,36 @@ const Navbar = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <Box sx={{ display: { xs: "flex", md: "none" }, alignItems: "center" }}>
-          <img src={logo} alt="Logo" style={{ width: 15, height: 35 }} />
-        </Box>
-
-        <Typography
-          variant="h6"
-          color="dark"
-          component="div"
-          sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}
-        >
-          LAFFET
-        </Typography>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Box
+            sx={{ display: { xs: "flex", md: "none" }, alignItems: "center" }}
+          >
+            <img src={logo} alt="Logo" style={{ width: 15, height: 35 }} />
+          </Box>
+        </Link>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <Typography
+            variant="h6"
+            color="dark"
+            component="div"
+            sx={{
+              flexGrow: 1,
+              display: { textDecoration: "none", xs: "none", md: "flex" },
+            }}
+          >
+            LAFFET
+          </Typography>
+        </Link>
         <Box sx={{ display: { xs: "none", md: "flex" } }}>
-          <Button color="dark">Ceramica</Button>
-          <Button color="dark">Lamparas</Button>
-          <Button color="dark">Muebles</Button>
-          <Button color="dark">Cocina</Button>
+          <Link to="/category/ceramics">
+            <Button color="dark">Ceramic</Button>
+          </Link>
+          <Link to="/category/lamps">
+            <Button color="dark">Lamps</Button>
+          </Link>
+          <Link to="/category/furniture">
+            <Button color="dark">Furniture</Button>
+          </Link>
         </Box>
         <Box sx={{ display: { xs: "flex", md: "none" } }}>
           <IconButton onClick={openMenu}>
@@ -58,15 +72,23 @@ const Navbar = () => {
             sx={{ display: { xs: "flex", md: "none" } }}
           >
             <MenuList>
-              <MenuItem> Ceramica</MenuItem>
-              <MenuItem>Lamparas</MenuItem>
-              <MenuItem>Muebles</MenuItem>
-              <MenuItem>Cocina</MenuItem>
+              <Link to="/category/ceramics">
+                <MenuItem> Ceramic</MenuItem>
+              </Link>
+              <Link to="/category/lamps">
+                <MenuItem>Lamps</MenuItem>
+              </Link>
+              <Link to="/category/furniture">
+                {" "}
+                <MenuItem>Furniture</MenuItem>
+              </Link>
             </MenuList>
           </Menu>
         </Box>
         <Box sx={{ display: { xs: "flex", md: "flex" }, marginLeft: "auto" }}>
-          <CartWidget />
+          <Link to="/cart">
+            <CartWidget />
+          </Link>
         </Box>
       </Toolbar>
     </AppBar>

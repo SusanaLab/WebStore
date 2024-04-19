@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
+import ItemList from "../ItemList/ItemList";
 
 const ItemListContainer = ({ greeting }) => {
   return (
@@ -13,6 +14,7 @@ const ItemListContainer = ({ greeting }) => {
         >
           {greeting}
         </Typography>
+        <ItemList/>
       </Box>
     </div>
   );
